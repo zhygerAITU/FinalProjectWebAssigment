@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <audio id="bg-music" src="music/ResidentEvil.mp3" autoplay loop></audio>
   <title>Contact - Horror Quest</title>
   <link rel="stylesheet" href="css/main_styles.css">
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 <body>
   <header>
@@ -85,8 +87,42 @@
 
   </main>
 
-  <footer>
-    <p>&copy; 2023 Horror Quest. All rights reserved.</p>
+  <footer class="bg-dark text-light py-3 wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Apple Store</h4>
+          <p>Astana Expo, Astana, Kazakhstan</p>
+          <p>Phone number: +7 (705) 220-5830</p>
+        </div>
+        <div class="col-md-6">
+          <h4>Follow Us</h4>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://instagram.com/dandeliodon?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fab fa-instagram fa-2x"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/groups/ElonMusk/?locale=ru_RU" target="_blank"><i class="fab fa-facebook fa-2x"></i></a></li>
+            <li class="list-inline-item"><a href="https://t.me/zhigerD" target="_blank"><i class="fab fa-telegram fa-2x"></i></a></li>
+            <li class="list-inline-item"><a href="https://github.com/zhygerAITU" target="_blank"><i class="fab fa-github fa-2x"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button id="toggle-music-btn">Mute</button>
+    
+    <script>
+      const audio = document.getElementById('bg-music');
+      const toggleBtn = document.getElementById('toggle-music-btn');
+      
+      toggleBtn.addEventListener('click', function() {
+        if (audio.muted) {
+          audio.muted = false;
+          toggleBtn.textContent = 'Mute';
+        } else {
+          audio.muted = true;
+          toggleBtn.textContent = 'Unmute';
+        }
+      });
+    </script>
   </footer>
+
 </body>
 </html>
