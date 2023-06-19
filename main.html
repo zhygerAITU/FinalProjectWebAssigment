@@ -24,8 +24,39 @@
     <section id="intro">
       <h2>Welcome to Horror Quest!</h2>
       <p>Embark on a chilling adventure filled with horror and suspense. Are you brave enough to face the darkness?</p>
-      <a href="#" class="button">Start Your Journey</a>
+      <a href="#" class="button" id="start-button">Start Your Journey</a>
+      
+      <style>
+        .fadeOut {
+          animation-name: fadeOut;
+          animation-duration: 4s;
+          animation-timing-function: ease-out;
+        }
+        
+        @keyframes fadeOut {
+          0% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      </style>
+      
+      <script>
+        document.getElementById('start-button').addEventListener('click', function(event) {
+          event.preventDefault();
+          document.getElementById('start-button').classList.add('fadeOut');
+          
+          setTimeout(function() {
+            window.location.href = 'check.html';
+          }, 3000);
+        });
+      </script>
     </section>
+
+
+
 
     <section id="features">
       <h2>Game Features</h2>
