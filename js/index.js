@@ -1,3 +1,14 @@
+const toshakes = document.querySelectorAll('.toshake')
+toshakes.forEach((toshake) => {
+    toshake.addEventListener('mouseover', () => {
+        toshake.classList.add("shake")
+    })
+    toshake.addEventListener('mouseout', () => {
+        toshake.classList.remove("shake")
+    })
+})
+
+
 const LoadNav = () => {
     return `
     <nav>
